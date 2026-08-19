@@ -22,6 +22,7 @@ return {
 				"markdown",
 				"markdown_inline",
 				"rust",
+				"matlab",
 			},
 			auto_install = true,
 			highlight = {enable = true},

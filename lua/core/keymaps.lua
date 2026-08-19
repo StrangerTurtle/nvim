@@ -4,9 +4,14 @@ vim.keymap.set("n", "<leader>er", vim.diagnostic.open_float)
 vim.keymap.set("n", "<leader>h", vim.cmd.noh)
 vim.keymap.set("i", "<C-Space>", "<C-x><C-o>", { silent = true })
 vim.keymap.set("n", "<leader>name", "a/*<CR><CR>/<Up> Michael Kepler<Esc>Go<CR>public class ")
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
+vim.keymap.set("t", "<C-[>", "<C-\\><C-n>")
 -- n <leader>mf is minifiles_toggle
 -- n <leader>ff is find_files
--- n <leader>mf is grep telescope
+-- n <leader>gf is grep telescope
+
+vim.api.nvim_create_user_command("W", "write", {})
+vim.api.nvim_create_user_command("Doc", "e /mnt/data/Documents", {})
 
 --vim.keymap.set("i", "{", "{<CR>}<Esc>O") --makes typing funcitons easier
 vim.keymap.set("i", "{<CR>", "{<CR>}<Esc>O")
