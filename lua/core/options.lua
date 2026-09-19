@@ -3,12 +3,15 @@ vim.opt.relativenumber = true
 
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
-
-vim.cmd("set fo-=cro") --stops commenting from going to next line
+vim.api.nvim_create_autocmd("BufEnter", {--stops commenting from going to next line
+	callback = function()
+		vim.opt_local.formatoptions:remove({ "c", "r", "o" })
+	end,
+})
 vim.opt.ttyfast = true
 
 vim.opt.smarttab = true
-vim.opt.numberwidth = 4
+vim.opt.numberwidth = 4 --pretty tabs
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 
@@ -22,3 +25,4 @@ vim.diagnostic.config({
 vim.opt.completeopt = { "menu", "preview", "longest", "preinsert", "menuone", "fuzzy" }
 vim.opt.shortmess:append("A") --hides the annoying file replace everytime thing
 vim.diagnostic.show()
+
