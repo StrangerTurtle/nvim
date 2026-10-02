@@ -3,7 +3,8 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>er", vim.diagnostic.open_float)
 vim.keymap.set("n", "<leader>h", vim.cmd.noh)
 vim.keymap.set("i", "<C-Space>", "<C-x><C-o>", { silent = true })
-vim.keymap.set("n", "<leader>name", "a/*<CR><CR>/<Up> Michael Kepler<Esc>Go<CR>public class ") -- for creating files in comp sci
+vim.keymap.set("n", "<leader>name", "a/*<CR><BS> *<CR>*/<Up> Michael Kepler<Esc>Go<CR>public class ") -- for creating files in comp sci
+vim.keymap.set("n", "<leader>bang", "O#!/bin/bash<Esc>jo")
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 vim.keymap.set("t", "<C-[>", "<C-\\><C-n>")
 -- n <leader>mf is minifiles_toggle
